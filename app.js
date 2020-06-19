@@ -25,6 +25,7 @@ function setup() {
     $steps = document.getElementById('steps');
     synth = new Synth($steps, cols, rows, $animation);
     synth.savePos();
+    Tone.start();
     Tone.Transport.bpm.value = bpm;
     Tone.Transport.start();
     loop.start(0);
