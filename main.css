@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    font-family: 'Dosis', sans-serif;
+    text-transform: lowercase;
+    
+    --color1: hsla(207, 97%, 15%, 1);
+    --color2: hsla(100, 1%, 100%, 1);
+    --color3: #2ec4b6;
+    --color4: #e71d36;
+    --color5: #ff9f1c;
+    
+    
+
+    background-color: var(--color1);
+    color: var(--color2);
+    
+}
+.wrapper{
+    margin: 10px auto;
+    width: 60%;
+}
+.app{
+    padding: 10px;
+    border-radius: 6%;
+    padding-top: 2px;
+    border-top: 4px solid var(--color3);
+    border-left: 2px solid var(--color4);
+    box-shadow: 3px 3px 3px var(--color2);
+    
+}
+
+header{
+    margin: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+header i{
+    display: inline;
+    font-size: 2.2rem;
+    padding: 5px;
+    background-color: var(--color1);
+    border: 1px solid var(--color4);
+    border-radius: 50%;
+ 
+}
+header h1{
+    display: inline-block;
+    font-size: 2.4rem;
+}
+
+.menu{
+    background: var(--color5);
+    padding: 10px;
+    border-top-left-radius: 6%;
+    border-top-right-radius: 6%;
+}
+.transport{
+    margin: 10px;
+    padding: 10px;
+    font-size: 2.5rem;
+    background: var(--color3);
+    border-radius: 6%;
+    
+    
+}
+.transport i{
+    padding: 5px;
+    background-color: var(--color1);
+    border: 1px solid var(--color4);
+    border-radius: 50%;
+}
+
+.controll{
+    padding: 10px;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.controll label{
+    display: block;
+    position: relative;
+    font-size: 1.2rem;
+    font-style: italic;
+    top: 20px;
+    color: var(--color2);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.8;
+}
+.input{
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+    
+}
+#steps{
+    background: var(--color5);
+    padding: 15px;
+
+    border-bottom-left-radius: 6%;
+    border-bottom-right-radius: 6%;
+    
+}
+.steps{
+    background: var(--color3);
+    border-radius: 6%;
+}
+.steps{
+    font-size: 1rem;
+    text-align: center;
+    
+}
+
+.row label{
+    align-self: center;
+}
+.row{
+    display: grid;
+    width: 70%;
+    margin: 0 auto;
+    grid-template-columns: repeat(16, 1fr);
+    grid-auto-rows: 28px;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+}
+
+.input {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 90%; /* Full-width */
+  height: 10px; /* Specified height */
+  background: var(--color3); /* Grey background */
+  outline: none; /* Remove outline */
+  padding: 5px;
+  
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: .2s;
+  border-radius: 6%;
+  text-align: center;
+}
+
+/* Mouse-over effects */
+.input:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: var(--color1); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  z-index: 3;
+  text-align: center;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+input[type="checkbox"] {
+    display:none;
+    justify-self: center;
+  }
+  input[type="checkbox"] + label::before {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    border: 2px solid var(--color1);
+    background-color: var(--color2);
+    justify-self: center;
+    
+    content: "";
+    float: left;
+    margin-right: 5px;
+    display: flex;
+  }
+  input[type="checkbox"]:checked+label::before {
+    box-shadow: inset 0px 0px 0px 3px var(--color4);
+    background-color: var(--color1);
+  }
+
+.bubble{
+    width: 30px;
+    height: 30px;
+    background: var(--color1);
+    border-radius: 50%;
+    
+}
+
+@keyframes bubble{
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 0.8;
+    }
+    7%{
+        width: 60px;
+        height: 60px;
+   
+    }
+    15%{
+        width: 30px;
+        height: 30px;
+      
+    }
+    100%{
+        width: 2px;
+        height: 2px;
+        opacity: 0;
+    }
+}
+
